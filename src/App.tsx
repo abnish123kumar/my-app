@@ -85,10 +85,14 @@ function App() {
 
 
   }
+   function cleareData(){
+      localStorage.clear();
+   }
 
   return (
     <div className="App">
-      <h1>Abnish Kumar</h1>
+      <h3>find the degree of separation between two
+users.</h3>
       <div className='boxes'>
         <label >User1 : </label>
         <input type="text" value={user1} onChange={(e) => setUser1(e.target.value)} /> <br></br></div>
@@ -108,6 +112,7 @@ function App() {
       <div className='boxes'>
         {result}
       </div>
+      <button onClick={()=>cleareData()}>Clear Data</button>
     </div>
   );
 }
