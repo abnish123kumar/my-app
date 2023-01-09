@@ -39,6 +39,8 @@ function App() {
     }
     findConnections(source, target);
     setResult(connectionPaths);
+      setUser1("");
+      setUser2("");
     return connectionPaths;
   }
 
@@ -83,7 +85,8 @@ function App() {
     else
       localStorage.setItem(`${user2}`, JSON.stringify([user1]));
 
-
+      setUser1("");
+      setUser2("");
   }
    function cleareData(){
       localStorage.clear();
